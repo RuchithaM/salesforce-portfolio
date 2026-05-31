@@ -1,0 +1,45 @@
++------------------------------------------------------+---------------+---------------+
+| Category                                             | Sync Limit    | Async Limit   |
++------------------------------------------------------+---------------+---------------+
+| SOQL Queries                                         | 100           | 200           |
+| Records Retrieved by SOQL                            | 50,000        | 50,000        |
+| SOSL Queries                                         | 20            | 20            |
+| DML Statements                                       | 150           | 150           |
+| DML Rows Processed                                   | 10,000        | 10,000        |
+| Heap Size                                            | 6 MB          | 12 MB         |
+| CPU Time                                             | 10,000 ms     | 60,000 ms     |
+| Callouts                                             | 100           | 100           |
+| Callout Timeout (Cumulative)                         | 120 sec       | 120 sec       |
+| Email Invocations                                    | 10            | 10            |
+| Describe Calls                                       | 100           | 100           |
+| Savepoints                                           | 5             | 5             |
+| Rollbacks                                            | 5             | 5             |
+| Maximum Stack Depth                                  | 1,000         | 1,000         |
+| Maximum Trigger Depth                                | 16            | N/A           |
+| Future Method Calls per Transaction                  | 50            | N/A           |
+| Queueable Jobs Added per Transaction                 | 50            | 1 (chaining)  |
+| Records via Database.getQueryLocator                 | 10,000        | 10,000        |
++------------------------------------------------------+---------------+---------------+
+
+Batch Apex Specific
++------------------------------------------------------+---------------+---------------+
+| Category                                             | Sync Limit    | Async Limit   |
++------------------------------------------------------+---------------+---------------+
+| QueryLocator Records in start()                      | N/A           | 50 Million    |
+| Execute Batch Scope Size                             | N/A           | Up to 2,000   |
+| Concurrent Active/Queued Batch Jobs                  | N/A           | 5             |
+| Apex Flex Queue Holding Jobs                         | N/A           | 100           |
+| Scheduled Apex Jobs                                  | N/A           | 100           |
++------------------------------------------------------+---------------+---------------+
+
+Common Interview Numbers
++------------------------------------------------------+---------------+---------------+
+| Category                                             | Value         | Notes         |
++------------------------------------------------------+---------------+---------------+
+| Trigger Batch Size                                   | 200           | Per execution |
+| Platform Event Trigger Batch Size                    | 2,000         | Per execution |
+| Queueable Chain Depth                                | Unlimited*    | Org dependent |
+| Future Method Parameters                             | 50            | Max params    |
+| Callout Request/Response Size                        | 6 MB          | Sync          |
+| Callout Request/Response Size                        | 12 MB         | Async         |
++------------------------------------------------------+---------------+---------------+
